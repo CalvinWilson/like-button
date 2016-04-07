@@ -59,7 +59,6 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	__webpack_require__(160);
-	__webpack_require__(164);
 	
 	(0, _reactDom.render)(_react2.default.createElement(_likeButton2.default, null), document.getElementById('app'));
 
@@ -19687,36 +19686,14 @@
 	exports.default = _react2.default.createClass({
 		displayName: "like-button",
 	
-		getInitialState: function getInitialState() {
-			return {
-				count: 0,
-				text: "Likes"
-			};
-		},
-		handleChange: function handleChange() {
-			var text;
-			var count = this.state.count + 1;
-			if (count === 1) {
-				text = "like";
-			} else {
-				text = "likes";
-			}
-			this.setState({
-				count: count,
-				text: text
-			});
-		},
-	
 		render: function render() {
 			return _react2.default.createElement(
 				"div",
 				{ id: "button" },
 				_react2.default.createElement(
-					"button",
-					{ id: "like", onClick: this.handleChange },
-					this.state.count,
-					" ",
-					this.state.text
+					"span",
+					null,
+					"Likes"
 				)
 			);
 		}
@@ -20068,46 +20045,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 164 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(165);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(163)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./like-button.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./like-button.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 165 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(162)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "#app {\n\twidth: 800px;\n\tmargin: auto;\n\ttext-align: center;\n}\n\n#like {\n\theight: 50px;\n\twidth: 100px;\n\tborder: 1px solid black;\n\tbackground: blue;\n\tcolor: white;\n\tborder-radius: 20px;\n\ttext-align: center;\n\tline-height: 50px;\n\tcursor: pointer;\n}\n\nbutton:focus {\n\toutline: none;\n}\n", ""]);
-	
-	// exports
 
 
 /***/ }

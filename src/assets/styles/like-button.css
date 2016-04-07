@@ -1,0 +1,21 @@
+#app {
+	width: 800px;
+	margin: auto;
+	text-align: center;
+}
+
+#like {
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;
+	background: blue;
+	color: white;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}

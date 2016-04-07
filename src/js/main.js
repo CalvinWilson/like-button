@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import MyFirstComponent from 'js/myFirstComponent'
+import LikeButton from 'js/like-button'
 
 require('assets/styles/style.css');
+require("assets/styles/like-button.css")
 
-render(<MyFirstComponent />, document.getElementById('app'));
+render(<LikeButton />, document.getElementById('app'));
